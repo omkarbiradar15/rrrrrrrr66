@@ -16,7 +16,7 @@ steps:
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.17'
-    jdkArchitectureOption: 'x64'
+    jdkArchitectureOption: 'Default'
     publishJUnitResults: true
-    testResultsFiles: 'pom.xml'
-    goals: 'clean package'
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    goals: 'clean test package'
